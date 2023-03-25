@@ -1,0 +1,76 @@
+/* .map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+     
+body * {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+ formatting for the popup boxes
+.mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+    padding: 1;
+    width: 180px;
+    background-color: rgba(213, 220, 88, 0.9);
+}
+
+.map-overlay-search {
+    position: absolute;
+    font-size: medium;
+    background: rgba(138, 220, 234, 0.8);
+    top: 2%;
+    left: 2%;
+    margin: 10px 0 10px;
+    padding: 20px;
+    overflow: visible;
+    box-shadow: 5px 5px 5px rgba(34, 26, 26, 0.533);
+    border-radius: 10px;
+}
+
+#returnbutton {
+
+    position: relative;
+    margin: 10px 0 0px;
+    width: 100%;
+}
+
+
+#hexgridbutton {
+
+    position: relative;
+    margin: 10px 0 0px;
+    width: 100%;
+} */
+
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+body {
+    overflow: hidden;
+    }
+     
+    body * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+     
+    .map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    }
