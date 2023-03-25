@@ -5,7 +5,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXJpbm1heWVlZSIsImEiOiJjbGRtMHNobWkwMnRhM25te
 //Initialize map and edit to your preference
 const beforeMap = new mapboxgl.Map({
     container: 'before', //container id in HTML
-    style: 'mapbox://styles/mrinmayeee/clfjtrdwe000101lisv97cdwj',  //****ADD MAP STYLE HERE *****
+    style: 'mapbox://styles/mapbox/light-v11',  //****ADD MAP STYLE HERE *****
     center: [-79.39, 43.65],  // starting point, longitude/latitude
     zoom: 9 // starting zoom level
 });
@@ -13,25 +13,25 @@ const beforeMap = new mapboxgl.Map({
 
 const afterMap = new mapboxgl.Map({
     container: 'after',
-    style: 'mapbox://styles/mrinmayeee/clfjtrdwe000101lisv97cdwj',
+    style: 'mapbox://styles/mapbox/light-v11',
     center: [-79.39, 43.65],  // starting point, longitude/latitude
     zoom: 9 // starting zoom level
 });
      
-// Add zoom and rotation controls to the map.
+// //Add zoom and rotation controls to the map.
 // map.addControl(new mapboxgl.NavigationControl());
 
-// Add fullscreen option to the map
+// //Add fullscreen option to the map
 // map.addControl(new mapboxgl.FullscreenControl());
 
-// Adding a search box - create geocoder variable
+// //Adding a search box - create geocoder variable
 // const geocoder = new MapboxGeocoder({
 //     accessToken: mapboxgl.accessToken,
 //     mapboxgl: mapboxgl,
 //     countries: "ca"
 // });
 
-// Use geocoder div to position geocoder on page
+// //Use geocoder div to position geocoder on page
 // document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 beforeMap.on('load', () => {
@@ -58,7 +58,7 @@ beforeMap.on('load', () => {
                     0.5, '#196F3D' // colour for  NDVI more than 0.5
                 ],
                 'fill-outline-color': 'white',
-                'fill-opacity': 0.6,
+                'fill-opacity': 0.9,
             },
         });
 });
@@ -72,7 +72,7 @@ afterMap.on('load', () => {
 
     afterMap.addLayer(
         {
-            'id': 'NDVI_1',
+            'id': 'NDVI_2',
             'type': 'fill',
             'source': 'NDVI',
             'source-layer': 'NDVI_byNeighb_TO_2019-124co0',
@@ -81,13 +81,13 @@ afterMap.on('load', () => {
                 [
                     'step', // expression to get a graduated colours for the location markers 
                     ['get', 'grlan19_12'], // GET expression retrieves the value from 'Distance' in the original geojson file (later turned into a tileset)
-                    '#EB9313', // colour for NDVI less than 0.2m
-                    0.3, '#EA9D2E', // colour for NDVI less than 0.2m
-                    0.4, '#00b4d8', // colour for NDVI less than 0.2m
-                    0.5, '#90e0ef' // colour for  NDVI less than 0.2m
+                    '#F5B041', // colour for NDVI less than 0.2m
+                    0.3, '#F39C12', // colour for NDVI less than 0.2m
+                    0.4, '#CA6F1E', // colour for NDVI less than 0.2m
+                    0.5, '#AF601A' // colour for  NDVI less than 0.2m
                 ],
                 'fill-outline-color': 'white',
-                'fill-opacity': 0.6,
+                'fill-opacity': 0.9,
             },
         });
 });
@@ -114,7 +114,4 @@ afterMap.on('load', () => {
 const container = '#comparison-container';
  
 const map = new mapboxgl.Compare(beforeMap, afterMap, container, {
-//Set this to enable comparing two maps by mouse movement:
-mousemove: true,
-orientation: 'vertical'
 });
