@@ -99,17 +99,22 @@ TempMap.on('load', () => {
 
 const container = '#comparison-container';
 
-    const map = new mapboxgl.Compare(NDVIMap, TempMap, container, {
-    });
-
-document.getElementById('comparecheck').addEventListener('change', (e) => { 
-    
-    map.setLayoutProperty(
-        '#comparison-container',
-        'visbility',
-        e.target.checked ? 'visible' : 'none'
-    );
+const comparemap = new mapboxgl.Compare(NDVIMap, TempMap, container, {
+   
 });
+let comparecheck = document.getElementById('comparecheck');
+
+comparecheck.addEventListener('click', () => {
+    if (comparecheck.checked) {
+        comparecheck.checked = true;
+        comparemap.style.display = "block";
+    }
+    else {
+        comparemap.style.display = "none";
+        comparecheck.checked = false;
+    }
+});
+
 
 
 //Adding a search box - create geocoder variable
@@ -123,7 +128,7 @@ const geocoder = new MapboxGeocoder({
 document.getElementById('geocoder').appendChild(geocoder.onAdd(NDVIMap));
 
 document.getElementById('returnbutton').addEventListener('click', () => {
-    map.flyTo({
+    comparemap.flyTo({
         center: [-79.39, 43.65],
         zoom: 9,
         essential: true
