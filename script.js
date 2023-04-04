@@ -6,15 +6,15 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXJpbm1heWVlZSIsImEiOiJjbGRtMHNobWkwMnRhM25te
 const NDVIMap = new mapboxgl.Map({
     container: 'before', //container id in HTML
     style: 'mapbox://styles/mapbox/light-v11',  //****ADD MAP STYLE HERE *****
-    center: [-79.39, 43.65],  // starting point, longitude/latitude
-    zoom: 9 // starting zoom level
+    center: [-79.408, 43.7056],  // starting point, longitude/latitude
+    zoom: 9.8 // starting zoom level
 });
 
 const TempMap = new mapboxgl.Map({
     container: 'after',
     style: 'mapbox://styles/mapbox/light-v11',
-    center: [-79.39, 43.65],  // starting point, longitude/latitude
-    zoom: 9 // starting zoom level
+    center: [-79.408, 43.7056],  // starting point, longitude/latitude
+    zoom: 9.8 // starting zoom level
 });
 
 
