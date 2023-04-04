@@ -19,6 +19,13 @@
     border-radius: 10px;
 }
 
+.comparemap {
+  position: absolute;
+  display: none;
+  /*set to none so that when a checkbox is clicked it's turned on*/
+}
+
+
 #returnbutton {
 
     position: relative;
@@ -43,7 +50,7 @@ body {
      
     .map {
     position: absolute;
-    top: 20%;
+    top: 10%;
     bottom: 0;
     width: 100%;
     }

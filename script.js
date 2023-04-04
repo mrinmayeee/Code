@@ -99,7 +99,7 @@ TempMap.on('load', () => {
 
 const container = '#comparison-container';
 
-const comparemap = new mapboxgl.Compare(NDVIMap, TempMap, container, {
+const map = new mapboxgl.Compare(NDVIMap, TempMap, container, {
    
 });
 let comparecheck = document.getElementById('comparecheck');
@@ -107,10 +107,10 @@ let comparecheck = document.getElementById('comparecheck');
 comparecheck.addEventListener('click', () => {
     if (comparecheck.checked) {
         comparecheck.checked = true;
-        comparemap.style.display = "block";
+        map.style.display = "block";
     }
     else {
-        comparemap.style.display = "none";
+        map.style.display = "none";
         comparecheck.checked = false;
     }
 });
