@@ -36,10 +36,10 @@ NDVIMap.on('load', () => {
                     [
                         'step', // expression to get a graduated colours for the location markers 
                         ['get', 'mean_ndvi_'], // GET expression retrieves the value from 'Distance' in the original geojson file (later turned into a tileset)
-                        '#58D68D', // colour for NDVI less than 0.2
-                        0.3, '#27AE60', // colour for NDVI more than 0.3
-                        0.4, '#229954', // colour for NDVI more than 0.4
-                        0.5, '#196F3D' // colour for  NDVI more than 0.5
+                        '#ABEBC6', // colour for NDVI less than 0.2
+                        0.3, '#58D68D', // colour for NDVI more than 0.3
+                        0.4, '#27AE60', // colour for NDVI more than 0.4
+                        0.5, '#145A32' // colour for  NDVI more than 0.5
                     ],
                 'fill-outline-color': 'white',
                 'fill-opacity': 0.9,
