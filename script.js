@@ -76,31 +76,11 @@ TempMap.on('load', () => {
             },
         });
 });
-// //POP-UP ON CLICK EVENT
-// afterMap.on('mouseenter', 'NDVI_1', () => {
-//     afterMap.getCanvas().style.cursor = 'pointer'; //Switch cursor to pointer when mouse is over a green place marker
-// });
-
-// afterMap.on('mouseleave', 'NDVI_1', () => {
-//     afterMap.getCanvas().style.cursor = ''; //Switch cursor back when mouse leaves the green place marker
-// });
-
-
-
-
-// afterMap.on('click', 'NDVI_1', (e) => {
-//     new mapboxgl.Popup() //Create a new popup box on each click
-//         .setLngLat(e.lngLat) //Use method to set the coordinates of popup based on where the user clicks
-//         .setHTML("<b>Neighbourhood:</b> " + e.features[0].properties.FIELD_7 + "<br>" +
-//             "<b>NDVI:</b> " + e.features[0].properties.grlan19_12) // add the popup text 
-//         .addTo(afterMap); //Show popup on map
-// })
-
 
 const container = '#comparison-container';
 
 const map = new mapboxgl.Compare(NDVIMap, TempMap, container, {
-   
+
 });
 let comparecheck = document.getElementById('comparecheck');
 

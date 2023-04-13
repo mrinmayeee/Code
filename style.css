@@ -1,126 +1,82 @@
-/* formatting for the popup boxes */
-.mapboxgl-popup-content {
-    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
-    padding: 1;
-    width: 180px;
-    background-color: rgba(213, 220, 88, 0.9);
-}
-
 .map-overlay-search {
-    position: absolute;
-    font-size: medium;
-    background: rgba(138, 220, 234, 0.8);
-    top: 15%;
-    left: 2%;
-    margin: 10px 0 10px;
-    padding: 20px;
-    overflow: visible;
-    box-shadow: 5px 5px 5px rgba(34, 26, 26, 0.533);
-    border-radius: 10px;
-}
-
-.comparemap {
   position: absolute;
-  display: none;
-  /*set to none so that when a checkbox is clicked it's turned on*/
+  font-size: medium;
+  background: rgba(138, 220, 234, 0.8);
+  top: 15%;
+  left: 2%;
+  margin: 10px 0 10px;
+  padding: 20px;
+  overflow: visible;
+  box-shadow: 5px 5px 5px rgba(34, 26, 26, 0.533);
+  border-radius: 10px;
 }
 
-
-#returnbutton {
-
-    position: relative;
-    margin: 10px 0 0px;
-    width: 100%;
+/* Map and slider */
+body {
+  overflow: none;
 }
 
-body { margin: 0; padding: 0}
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+body * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.map {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #c9f2f6;
+}
+
+/* Navbar links */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background: var(--gradient) !important;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  /* border: 5px solid #fff !important;  */
+  box-shadow: #0b6365 1px 0 10px;
+  text-decoration: none;
+}
+
+/* Tiles on Learn More tab and buttons */
+:root {
+  --gradient: linear-gradient(to left top, #1ec283 10%, #210551 90%) !important;
+}
 
 body {
-    overflow: none;
-    }
-     
-    body * {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    }
-     
-    .map {
-    position: absolute;
-    top: 10%;
-    bottom: 0;
-    width: 100%;
-    }
+  background: #065044 !important;
+}
 
-/* Navbar container 
-.navbar {
-    overflow: hidden;
-    background-color: #182b80;
-    font-family: Arial;
-  }
-  
-  Links inside the navbar
-  .navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  The dropdown container
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  Dropdown button
-  .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    /* margin: 0; /* Important for vertical align on mobile phones */
-  /* }
-  
-  /* Add a red background color to navbar links on hover
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(14, 198, 106);
-  }
-  
-   Dropdown content (hidden by default)
-  .dropdown-content {
-    display: none;
-    position: relative;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  Links inside the dropdown
-  .dropdown-content a {
-    float: none;
-    color: rgb(24, 106, 145);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: match-parent;
-  }
-  
- Add a grey background color to dropdown links on hover
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-   Show the dropdown menu on hover 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  } */
+.card {
+  background: #ffffff;
+  border: 1px solid #0ec0cd;
+  color: rgba(19, 95, 71, 0.8);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-image-source: var(--gradient) !important;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--gradient) !important;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: #0b6365 1px 0 10px;
+  text-decoration: none;
+}
